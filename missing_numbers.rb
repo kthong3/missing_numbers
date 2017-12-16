@@ -17,15 +17,18 @@ input = [4,3,2,7,8,2,3,1]
 def find_missing_num(input)
   sorted_unique = input.sort.uniq
   largest = sorted_unique.last
+  p largest
   output = []
 
-  counter = 1
-  while counter < largest
-
-
-    counter += 1
+  i = 1
+  while i < largest
+    if !sorted_unique.include?(i)
+      output << i
+    end
+    i += 1
   end
 
+  p output
 end
 
 find_missing_num(input)
