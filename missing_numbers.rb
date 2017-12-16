@@ -17,7 +17,6 @@ input = [4,3,2,7,8,2,3,1]
 def find_missing_num(input)
   sorted_unique = input.sort.uniq
   largest = sorted_unique.last
-  p largest
   output = []
 
   i = 1
@@ -28,7 +27,7 @@ def find_missing_num(input)
     i += 1
   end
 
-  p output
+  output
 end
 
-find_missing_num(input)
+p find_missing_num(input)
